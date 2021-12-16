@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 # Flask Objekt erzeugen
 app = Flask(__name__)
@@ -15,6 +15,11 @@ def hello_flask():
 @app.route("/about")
 def about():
     return "<h1>About Page</h1>"
+
+
+@app.route("/semantic")
+def semantic():
+    return render_template("index.html")
 
 
 # Einstiegspunkt in unsere App
