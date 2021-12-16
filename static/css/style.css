@@ -1,0 +1,83 @@
+/* Hintergrundfarbe der gesamten Seite */
+body {
+  /*background-color: #330033; */
+}
+
+
+h1 {
+  color: yellow;  
+}
+
+/* alle h2 überschriften */
+h2 {
+  color: magenta;  
+}
+
+/*h3 {*/
+  /*color: red;  */
+/*}*/
+h3 {
+  color: yellow;  
+}
+
+#red-id {
+  color: red; 
+}
+.red-id {
+  color: yellow;
+}
+
+
+/* alle Absaetze */
+p {
+  color: lightblue;
+}
+
+/* CSS-Klassen  */
+.menu {
+  list-style: none;
+  text-align: center;
+  background-color: lightsalmon;
+  /*       top  right bottom left */
+  /*padding: 200px 100px 200px 100px;*/
+  /* gleich wie oben */
+      /*   o/u  r/l  */
+  padding: 10px 0;
+}
+
+.menu-item {
+  display: inline;
+}
+
+.white-background {
+  background-color: white;
+}
+
+.grey-background {
+  background-color: grey;
+}
+
+/* Debugging/Helper Klassen */
+.green-border {
+  /*border: 1px solid green;*/
+  outline: 1px solid green;
+}
+
+header ul {}
+header > ul {}
+header + ul {}
+header , ul {}
+
+.no-margin {
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+
+/*figure {*/
+    /*display: block;*/
+    /*margin-block-start: 1em;*/
+    /*margin-block-end: 1em;*/
+    /*margin-inline-start: 0;*/
+    /*margin-inline-end: 0;*/
+/*}*/
