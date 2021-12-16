@@ -22,6 +22,11 @@ def semantic():
     return render_template("index.html")
 
 
+@app.route("/ueber_uns")
+def ueber_uns():
+    return render_template("ueber_uns.html")
+
+
 # Einstiegspunkt in unsere App
 # so können wir den Webserver einfach über die IDE starten,
 # den Debugging Modus aktivieren etc.

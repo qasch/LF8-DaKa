@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang='de'>
+{% extends 'base.html' %}
 
-<head>
-  <title>Unsere 1. Webseite</title>
-  <meta charset='utf-8'>
-  <link rel='stylesheet' href='../static/css/style.css'>
-</head>
+{% block title %} Startseite {% endblock %}
 
-<body>
-  <header>
+{% block body %}
+<header>
     <!--<img src="logo.jpg">-->
     <nav class="green-border">
       <ul class="menu">
@@ -61,20 +56,7 @@
     <footer>
       <h2>Footer</h2>
       <a href='https://wikipedia.org' target='_blank'>Name des Links</a>
-      <a href='ueber-uns.html'>Über uns</a>
+      <a href="{{ url_for('ueber_uns') }}">Über uns</a>
     </footer>
   </section>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
+{% endblock %}
