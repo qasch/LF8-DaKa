@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import sqlite3
 
 # Flask Objekt erzeugen
 app = Flask(__name__)
@@ -8,8 +9,21 @@ app = Flask(__name__)
 # über den Browser auszuführen
 @app.route("/")
 @app.route("/index")
-def hello_flask():
-    return "<h1>Hallo Flask App, jetzt mit Debugger und Start  über IDE!</h1>"
+def index():
+    # Verbindung zur Datenbank herstellen
+    # Datenbank erstellen, falls sie nicht existiert
+    connection = sqlite3.connect('db/flask.db')
+
+    # Cursor erzeugen
+    cursor = connection.cursor()
+
+    # SQL ausführen
+    result = cursor.execute(
+        """
+        SELECT * from person;
+        """).fetchall()
+
+    return render_template("index.html", result=result)
 
 
 @app.route("/about")
@@ -19,7 +33,7 @@ def about():
 
 @app.route("/semantic")
 def semantic():
-    return render_template("index.html")
+    return render_template("semantic.html")
 
 
 @app.route("/ueber_uns")

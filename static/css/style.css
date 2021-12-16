@@ -4,22 +4,6 @@ body {
 }
 
 
-h1 {
-  color: yellow;  
-}
-
-/* alle h2 überschriften */
-h2 {
-  color: magenta;  
-}
-
-/*h3 {*/
-  /*color: red;  */
-/*}*/
-h3 {
-  color: yellow;  
-}
-
 #red-id {
   color: red; 
 }
@@ -27,11 +11,6 @@ h3 {
   color: yellow;
 }
 
-
-/* alle Absaetze */
-p {
-  color: lightblue;
-}
 
 /* CSS-Klassen  */
 .menu {
